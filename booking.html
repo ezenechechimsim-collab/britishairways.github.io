@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/booking.css">
+    <title>Document</title>
+</head>
+<body>
+      <!-- navigationbar -->
+    <nav>
+        <div class="nav-bar container">
+            <div class="logo">
+                <div class="img-logo">
+                    <img src="/images/Layer 8.png" alt="">
+                    <img src="/images/Layer 7.png" alt="">
+                </div>
+                <h3 class="section__paragraph"><span class="white">BRITISH</span> <span class="red section__paragraph">AIRWAYS</span></h3>
+            </div>
+            <div class="nav-content">
+                <ul>
+                    <li class="section__paragraph" ><a href="/home.html">Home</a></li>
+                    <li class="section__paragraph"><a href="/destinations.html">Destinations</a></li>
+                    <li class="section__paragraph"><a href="/services.html">Services</a></li>
+                    <li class="section__paragraph"><a href="">About</a></li>
+                    <li class="section__paragraph"><a href="/agent.html">Agent</a></li>
+                    <button class="section__paragraph">Login</button>
+                    <button class="section__paragraph">Signup</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+
+      <!-- hero -->
+<section class="book-hero">
+  <div class="wrap">
+    <div class="book-hero-head">
+      <span class="eyebrow">Book a flight</span>
+      <h1>Where would you like to go?</h1>
+      <p>Search live fares across 180+ destinations and lock in your seat in under a minute.</p>
+    </div>
+
+    <div class="search-card">
+      <div class="trip-tabs-row">
+        <div class="trip-tabs" id="tripTabs">
+          <button class="trip-tab active" data-trip="return">Return</button>
+          <button class="trip-tab" data-trip="one-way">One way</button>
+          <button class="trip-tab" data-trip="multi">Multi-city</button>
+        </div>
+        <div class="cabin-select">
+          Cabin
+          <select id="cabinSelect">
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Club (Business)</option>
+            <option>First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-fields">
+        <div class="field">
+          <label>From</label>
+          <input type="text" value="London Heathrow (LHR)" id="fromField">
+          <div class="sub">United Kingdom</div>
+          <button class="swap-btn" id="swapBtn" aria-label="Swap origin and destination">⇄</button>
+        </div>
+        <div class="field">
+          <label>To</label>
+          <input type="text" value="Lagos (LOS)" id="toField">
+          <div class="sub">Nigeria</div>
+        </div>
+        <div class="field">
+          <label>Depart</label>
+          <input type="date" id="departDate" value="2026-10-14">
+        </div>
+        <div class="field">
+          <label>Return</label>
+          <input type="date" id="returnDate" value="2026-10-28">
+        </div>
+        <button class="search-btn" id="searchBtn">🔍 Search flights</button>
+      </div>
+
+      <div class="search-extras">
+        <div class="chip-row">
+          <span class="chip">👤 1 adult</span>
+          <span class="chip">🎒 1 bag</span>
+          <span class="chip">✕ Flexible dates</span>
+        </div>
+        <div class="promo-note">Prices shown include taxes · Book by Fri for <b>Executive Club</b> bonus Avios</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book-body">
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- FILTERS -->
+      <aside class="filters">
+        <h4>Filter results</h4>
+
+        <div class="filter-group">
+          <h5>Stops</h5>
+          <label class="filter-option"><input type="checkbox" checked> Direct (3)</label>
+          <label class="filter-option"><input type="checkbox"> 1 stop (6)</label>
+          <label class="filter-option"><input type="checkbox"> 2+ stops (2)</label>
+        </div>
+
+        <div class="filter-group">
+          <h5>Price range</h5>
+          <input type="range" class="price-range" min="400" max="1200" value="900">
+          <div class="price-labels"><span>$400</span><span>$1,200</span></div>
+        </div>
+
+        <div class="filter-group">
+          <h5>Departure time</h5>
+          <label class="filter-option"><input type="checkbox"> Morning (05:00–12:00)</label>
+          <label class="filter-option"><input type="checkbox" checked> Afternoon (12:00–18:00)</label>
+          <label class="filter-option"><input type="checkbox"> Evening (18:00–24:00)</label>
+        </div>
+
+        <div class="filter-group">
+          <h5>Cabin</h5>
+          <label class="filter-option"><input type="checkbox" checked> Economy</label>
+          <label class="filter-option"><input type="checkbox"> Premium Economy</label>
+          <label class="filter-option"><input type="checkbox"> Club (Business)</label>
+          <label class="filter-option"><input type="checkbox"> First</label>
+        </div>
+
+        <button class="btn btn-outline btn-block">Reset filters</button>
+      </aside>
+
+      <!-- RESULTS -->
+      <div>
+        <div class="results-head">
+          <div>
+            <h3>London (LHR) → Lagos (LOS)</h3>
+            <span>11 flights found · 14 Oct 2026</span>
+          </div>
+          <select class="sort-select">
+            <option>Sort: Recommended</option>
+            <option>Sort: Cheapest first</option>
+            <option>Sort: Fastest first</option>
+            <option>Sort: Earliest departure</option>
+          </select>
+        </div>
+
+        <div class="flight-card selected" data-price="620">
+          <div class="flight-top">
+            <div class="flight-route">
+              <div class="fr-point"><div class="t">13:40</div><div class="c">LHR</div></div>
+              <div class="fr-path">
+                <div class="dur">6h 25m</div>
+                <div class="fr-line"><span class="fr-plane">✈</span></div>
+                <div class="fr-stops">Direct</div>
+              </div>
+              <div class="fr-point"><div class="t">20:05</div><div class="c">LOS</div></div>
+            </div>
+            <div class="flight-price">
+              <div class="p">$620</div>
+              <div class="pp">per adult, return</div>
+              <div class="cabin">Economy</div>
+            </div>
+          </div>
+          <div class="flight-meta">
+            <span class="badge-direct">Direct flight</span>
+            <span>✈ Boeing 787-9</span>
+            <span>🎒 1 checked bag included</span>
+            <span>↺ Free date change</span>
+          </div>
+        </div>
+
+        <div class="flight-card" data-price="590">
+          <div class="flight-top">
+            <div class="flight-route">
+              <div class="fr-point"><div class="t">08:15</div><div class="c">LHR</div></div>
+              <div class="fr-path">
+                <div class="dur">9h 50m</div>
+                <div class="fr-line"><span class="fr-plane">✈</span></div>
+                <div class="fr-stops">1 stop · CDG</div>
+              </div>
+              <div class="fr-point"><div class="t">18:05</div><div class="c">LOS</div></div>
+            </div>
+            <div class="flight-price">
+              <div class="p">$590</div>
+              <div class="pp">per adult, return</div>
+              <div class="cabin">Economy</div>
+            </div>
+          </div>
+          <div class="flight-meta">
+            <span>🔁 1 stop</span>
+            <span>✈ Airbus A350</span>
+            <span>🎒 1 checked bag included</span>
+            <span>↺ Free date change</span>
+          </div>
+        </div>
+
+        <div class="flight-card" data-price="845">
+          <div class="flight-top">
+            <div class="flight-route">
+              <div class="fr-point"><div class="t">21:10</div><div class="c">LHR</div></div>
+              <div class="fr-path">
+                <div class="dur">6h 20m</div>
+                <div class="fr-line"><span class="fr-plane">✈</span></div>
+                <div class="fr-stops">Direct</div>
+              </div>
+              <div class="fr-point"><div class="t">03:30</div><div class="c">LOS</div></div>
+            </div>
+            <div class="flight-price">
+              <div class="p">$845</div>
+              <div class="pp">per adult, return</div>
+              <div class="cabin">Premium Economy</div>
+            </div>
+          </div>
+          <div class="flight-meta">
+            <span class="badge-direct">Direct flight</span>
+            <span>✈ Boeing 787-9</span>
+            <span>🎒 2 checked bags included</span>
+            <span>🍽 Enhanced dining</span>
+          </div>
+        </div>
+
+        <!-- FARE COMPARISON -->
+        <div class="fare-section">
+          <h3>Compare fares</h3>
+          <p>Pick the cabin that fits your trip — every fare includes seat selection and Avios earning.</p>
+          <div class="fare-grid">
+
+            <div class="fare-card">
+              <h4>Economy</h4>
+              <div class="price">$620 <small>return</small></div>
+              <ul>
+                <li><span class="ic">✓</span> 1 checked bag (23kg)</li>
+                <li><span class="ic">✓</span> Standard seat selection</li>
+                <li><span class="ic">✓</span> Personal entertainment screen</li>
+                <li class="no"><span class="ic">✕</span> Lounge access</li>
+                <li class="no"><span class="ic">✕</span> Flat-bed seat</li>
+              </ul>
+              <button class="btn btn-outline btn-block">Select Economy</button>
+            </div>
+
+            <div class="fare-card popular">
+              <span class="pop-tag">Most booked</span>
+              <h4>Premium Economy</h4>
+              <div class="price">$845 <small>return</small></div>
+              <ul>
+                <li><span class="ic">✓</span> 2 checked bags (23kg each)</li>
+                <li><span class="ic">✓</span> Extra legroom seating</li>
+                <li><span class="ic">✓</span> Enhanced three-course dining</li>
+                <li><span class="ic">✓</span> Amenity kit</li>
+                <li class="no"><span class="ic">✕</span> Flat-bed seat</li>
+              </ul>
+              <button class="btn btn-coral btn-block">Select Premium</button>
+            </div>
+
+            <div class="fare-card">
+              <h4>Club (Business)</h4>
+              <div class="price">$1,540 <small>return</small></div>
+              <ul>
+                <li><span class="ic">✓</span> 2 checked bags (32kg each)</li>
+                <li><span class="ic">✓</span> Fully flat bed</li>
+                <li><span class="ic">✓</span> Lounge access</li>
+                <li><span class="ic">✓</span> Fast-track security</li>
+                <li><span class="ic">✓</span> Chef-curated menu &amp; bar</li>
+              </ul>
+              <button class="btn btn-outline btn-block">Select Club</button>
+            </div>
+
+            <div class="fare-card">
+              <h4>First</h4>
+              <div class="price">$2,980 <small>return</small></div>
+              <ul>
+                <li><span class="ic">✓</span> 3 checked bags (32kg each)</li>
+                <li><span class="ic">✓</span> Private suite &amp; flat bed</li>
+                <li><span class="ic">✓</span> First lounge &amp; chauffeur</li>
+                <li><span class="ic">✓</span> On-demand dining</li>
+                <li><span class="ic">✓</span> Dedicated cabin crew</li>
+              </ul>
+              <button class="btn btn-outline btn-block">Select First</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <aside class="summary">
+        <h4>Your trip so far</h4>
+        <div class="summary-flight">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagos%20skyline.jpg?width=200" alt="Lagos">
+          <div>
+            <div class="route">LHR → LOS</div>
+            <div class="date">14 Oct – 28 Oct 2026</div>
+          </div>
+        </div>
+        <div class="summary-row"><span>Fare (1 adult)</span><b id="sumFare">$620</b></div>
+        <div class="summary-row"><span>Taxes &amp; fees</span><b>$96</b></div>
+        <div class="summary-row"><span>Seat selection</span><b>$0</b></div>
+        <div class="summary-total">
+          <span class="lbl">Total</span>
+          <span class="amt" id="sumTotal">$716</span>
+        </div>
+        <a href="#" class="btn btn-coral btn-block btn-lg" style="margin-top:18px;">Continue to passenger details</a>
+        <div class="trust-row">
+          <span><span class="ic">🔒</span> Secure checkout, encrypted end-to-end</span>
+          <span><span class="ic">↺</span> Free changes within 24 hours of booking</span>
+          <span><span class="ic">★</span> Earn 1,240 Avios on this trip</span>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+<!-- footer -->
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+       
+        <p>Flying travellers between 180+ cities with modern aircraft, genuine service, and fares that make sense.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="X">✕</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        <div class="app-badges">
+          <span>📱 App Store</span>
+          <span>▶ Google Play</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+       <h5>Travel</h5>
+        <ul>
+          <li><a href="/booking.html">Book a flight</a></li>
+          <li><a href="/booking.html">Manage booking</a></li>
+          <li><a href="/booking.html">Online check-in</a></li>
+          <li><a href="/booking.html">Flight status</a></li>
+          <li><a href="/booking.html">Baggage info</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Destinations</h5>
+        <ul>
+          <li><a href="/destinations.html">Lagos</a></li>
+          <li><a href="/destinations.html">New York</a></li>
+          <li><a href="/destinations.html">Cairo</a></li>
+          <li><a href="/destinations.html">Dubai</a></li>
+          <li><a href="/destinations.html">Cape Town</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Newsroom</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Investor relations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Travel agent portal</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 British Airways homepage concept. Built for demonstration purposes only.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Cookie settings</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="/book.js"></script>
+</body>
+</html>

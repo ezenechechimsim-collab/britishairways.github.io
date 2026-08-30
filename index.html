@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/style.css">
+    <title>My Website</title>
+</head>
+<body>
+    <!-- navigationbar -->
+    <nav>
+        <div class="nav-bar container">
+            <div class="logo">
+                <div class="img-logo">
+                    <img src="/images/Layer 8.png" alt="">
+                    <img src="/images/Layer 7.png" alt="">
+                </div>
+                <h3 class="section__paragraph"><span class="white">BRITISH</span> <span class="red section__paragraph">AIRWAYS</span></h3>
+            </div>
+            <div class="nav-content">
+                <ul>
+                    <li class="section__paragraph" ><a href="/home.html">Home</a></li>
+                    <li class="section__paragraph"><a href="/destinations.html">Destinations</a></li>
+                    <li class="section__paragraph"><a href="/services.html">Services</a></li>
+                    <li class="section__paragraph"><a href="">About</a></li>
+                    <li class="section__paragraph"><a href="/agent.html">Agent</a></li>
+                    <button class="section__paragraph">Login</button>
+                    <button class="section__paragraph">Signup</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero-section -->
+    
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <span class="eyebrow">Fly the Flag</span>
+        <h1>Seamless Travel Experience</h1>
+        <p class="lede">Modern facilities, exceptional customer service</p>
+        <p class="sub">From takeoff to touchdown, every detail is designed around you — ergonomic comfort, chef-crafted dining, and entertainment that makes the miles disappear.</p>
+        <div class="hero-ctas">
+          <a class="home" href="/destinations.html" class="btn btn-coral btn-lg">Explore destinations</a>
+          <a class="home" href="/booking.html" class="btn btn-ghost btn-lg">Manage booking</a>
+        </div>
+      </div>
+
+      <div class="weather-card">
+        <div class="weather-top">
+          <div class="weather-loc">Harmondsworth Weather<br><small>London Heathrow, UK</small></div>
+          <div class="weather-clock">
+            <div class="time" id="clockTime">--:--</div>
+            <div class="date" id="clockDate">Loading date…</div>
+          </div>
+        </div>
+        <div class="weather-main">
+          <div class="weather-icon" id="weatherIcon">⛅</div>
+          <div>
+            <div class="weather-temp" id="weatherTemp">--°C</div>
+            <div class="weather-desc" id="weatherDesc">Fetching conditions…</div>
+          </div>
+        </div>
+        <div class="weather-grid">
+          <div class="weather-stat">Humidity<b id="weatherHumidity">--%</b></div>
+          <div class="weather-stat">Wind<b id="weatherWind">-- km/h</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-collage">
+      <div class="collage-main">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Two%20British%20Airways%20Boeing%20787-9%20on%20stand%20at%20London%20Heathrow.jpg?width=1000" alt="British Airways Boeing 787 at London Heathrow">
+      </div>
+      <div class="collage-side">
+        <div class="box">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/British%20Airways%20A380-800%20F-WWSC.jpg?width=700" alt="British Airways Airbus A380">
+        </div>
+        <div class="box">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Upper%20deck%20of%20British%20Airways%20Airbus%20A380.jpg?width=700" alt="British Airways cabin interior">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-strip">
+    <div class="wrap feature-strip-grid">
+      <div class="feature-strip-item">
+        <span class="dot"></span>
+        <div><b>Seats</b><p>Ergonomic seating with adjustable headrests, a pillow, and a blanket on every long-haul route.</p></div>
+      </div>
+      <div class="feature-strip-item">
+        <span class="dot"></span>
+        <div><b>Food &amp; drink</b><p>A complimentary three-course meal, snacks, and a full bar service — hot, cold, and alcoholic drinks.</p></div>
+      </div>
+      <div class="feature-strip-item">
+        <span class="dot"></span>
+        <div><b>Entertainment</b><p>A personal screen at every seat, loaded with new-release movies, TV shows, and games.</p></div>
+      </div>
+    </div>
+     <div class="view-all">
+    <a href="/services.html">View All</a>
+  </div>
+   
+  </div>
+ 
+</section>
+
+<section class="section" id="destinations">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Where next</div>
+        <h2>Popular destinations</h2>
+        <p>Five routes our travellers keep coming back to — swipe through or jump straight to one.</p>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a href="/destinations.html" class="btn btn-coral">View all routes</a>
+      </div>
+    </div>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track-outer">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="dest-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagos%20skyline.jpg?width=1400" alt="Lagos, Nigeria skyline">
+            <div class="dest-overlay">
+              <div class="dest-tag">Nigeria · LOS</div>
+              <h3>Lagos</h3>
+              <p>West Africa's buzzing megacity — Afrobeats, waterfront skylines, and Africa's fastest-growing tech scene.</p>
+              <div class="dest-meta">
+                <div class="dest-price">From <b>$620</b> return</div>
+                <a href="/booking.html" class="dest-book">Book Lagos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dest-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New%20York%20City%20skyline.jpg?width=1400" alt="New York City skyline">
+            <div class="dest-overlay">
+              <div class="dest-tag">United States · JFK</div>
+              <h3>New York</h3>
+              <p>Broadway lights, Central Park mornings, and skyline views that never get old — the city that never sleeps.</p>
+              <div class="dest-meta">
+                <div class="dest-price">From <b>$540</b> return</div>
+                <a href="/booking.html" class="dest-book">Book New York</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dest-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Pyramid%20of%20Giza.jpg?width=1400" alt="Great Pyramid of Giza, Egypt">
+            <div class="dest-overlay">
+              <div class="dest-tag">Egypt · CAI</div>
+              <h3>Cairo</h3>
+              <p>Stand before the last surviving wonder of the ancient world, then drift down the Nile at sunset.</p>
+              <div class="dest-meta">
+                <div class="dest-price">From <b>$480</b> return</div>
+                <a href="/booking.html" class="dest-book">Book Cairo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dest-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dubai%20Skyline%202016.jpg?width=1400" alt="Dubai skyline with Burj Khalifa">
+            <div class="dest-overlay">
+              <div class="dest-tag">United Arab Emirates · DXB</div>
+              <h3>Dubai</h3>
+              <p>Desert dunes by day, the world's tallest skyline by night — where ambition is the local language.</p>
+              <div class="dest-meta">
+                <div class="dest-price">From <b>$510</b> return</div>
+                <a href="/booking.html" class="dest-book">Book Dubai</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dest-card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Town%20skyline%20with%20Table%20Mountain.jpg?width=1400" alt="Cape Town skyline with Table Mountain">
+            <div class="dest-overlay">
+              <div class="dest-tag">South Africa · CPT</div>
+              <h3>Cape Town</h3>
+              <p>Table Mountain at your back, two oceans at your feet, and some of the world's best coastal drives.</p>
+              <div class="dest-meta">
+                <div class="dest-price">From <b>$590</b> return</div>
+                <a href="/booking.html" class="dest-book">Book Cape Town</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-nav carousel-prev" id="prevBtn" aria-label="Previous">‹</button>
+      <button class="carousel-nav carousel-next" id="nextBtn" aria-label="Next">›</button>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+
+    <div class="dest-strip" id="destStrip">
+      <div class="dest-thumb active" data-index="0"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lagos%20skyline.jpg?width=300" alt="Lagos thumbnail"><span>Lagos</span></div>
+      <div class="dest-thumb" data-index="1"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/New%20York%20City%20skyline.jpg?width=300" alt="New York thumbnail"><span>New York</span></div>
+      <div class="dest-thumb" data-index="2"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Great%20Pyramid%20of%20Giza.jpg?width=300" alt="Cairo thumbnail"><span>Cairo</span></div>
+      <div class="dest-thumb" data-index="3"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dubai%20Skyline%202016.jpg?width=300" alt="Dubai thumbnail"><span>Dubai</span></div>
+      <div class="dest-thumb" data-index="4"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Town%20skyline%20with%20Table%20Mountain.jpg?width=300" alt="Cape Town thumbnail"><span>Cape Town</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section details" id="about">
+  <div class="wrap details-grid">
+    <div class="details-copy">
+      <div class="section-eyebrow">About the airline</div>
+      <h2>Modern facilities, exceptional customer service</h2>
+      <p>For over a century, British Airways has connected people across the globe. Today our fleet blends long-haul comfort with genuinely useful technology — from real-time flight tracking to a cabin crew trained to anticipate what you need before you ask.</p>
+      <div class="stat-row">
+        <div class="stat"><b>180+</b><span>Destinations worldwide</span></div>
+        <div class="stat"><b>32M</b><span>Passengers a year</span></div>
+        <div class="stat"><b>4.7★</b><span>Average trip rating</span></div>
+      </div>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">✈</div>
+        <div><h4>Modern fleet</h4><p>Airbus A380 and Boeing 787 Dreamliner aircraft with quieter cabins and better cabin pressure for less jet lag.</p></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎧</div>
+        <div><h4>24/7 customer support</h4><p>Real humans on live chat, phone, and social media, day or night, wherever you're flying from.</p></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🧳</div>
+        <div><h4>Generous baggage</h4><p>Two free checked bags in Club and First, transparent limits for Economy — no surprise fees at the gate.</p></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏆</div>
+        <div><h4>Executive Club</h4><p>Earn Avios on every flight and unlock lounge access, priority boarding, and seat upgrades sooner.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">On this website</div>
+        <h2>Everything you can do here</h2>
+        <p>Book, manage, and plan your whole trip without leaving the page.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🔍</span>
+        <h4>Flight search</h4>
+        <p>Compare fares across dates and cabins, with flexible-date pricing shown at a glance.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🪪</span>
+        <h4>Online check-in</h4>
+        <p>Check in from 24 hours before departure and choose your seat from your phone.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📄</span>
+        <h4>Manage booking</h4>
+        <p>Change dates, add baggage, or request assistance — all self-serve, no call queue.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛬</span>
+        <h4>Live flight status</h4>
+        <p>Real-time departure boards and gate updates pushed straight to your device.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎯</span>
+        <h4>Avios rewards</h4>
+        <p>Track points, redeem for flights or upgrades, and see exactly what you're saving.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🧭</span>
+        <h4>Trip planner</h4>
+        <p>Bundle flights, hotels, and airport transfers into one itinerary, one payment.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h4>Travel protection</h4>
+        <p>Optional cover for cancellations, delays, and medical costs, added at checkout.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💬</span>
+        <h4>Agent support</h4>
+        <p>Travel agents get a dedicated portal for group bookings and corporate accounts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="agent">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h3>Ready for your next departure?</h3>
+        <p>Search live fares across all 180+ destinations — takes less than a minute.</p>
+      </div>
+      <a href="#destinations" class="btn btn-coral btn-lg">Search flights</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        
+        <p>Flying travellers between 180+ cities with modern aircraft, genuine service, and fares that make sense.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="X">✕</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        <div class="app-badges">
+          <span>📱 App Store</span>
+          <span>▶ Google Play</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+ <h5>Travel</h5>
+        <ul>
+          <li><a href="/booking.html">Book a flight</a></li>
+          <li><a href="/booking.html">Manage booking</a></li>
+          <li><a href="/booking.html">Online check-in</a></li>
+          <li><a href="/booking.html">Flight status</a></li>
+          <li><a href="/booking.html">Baggage info</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Destinations</h5>
+        <ul>
+          <li><a href="/destinations.html">Lagos</a></li>
+          <li><a href="/destinations.html">New York</a></li>
+          <li><a href="/destinations.html">Cairo</a></li>
+          <li><a href="/destinations.html">Dubai</a></li>
+          <li><a href="/destinations.html">Cape Town</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Newsroom</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Investor relations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Travel agent portal</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 British Airways homepage concept. Built for demonstration purposes only.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Cookie settings</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="/index.js"></script>
+</body>
+</html>
